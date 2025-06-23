@@ -111,7 +111,7 @@ order by count(`From - To City`) desc limit 5;
 select if (dayofweek(Date_field)=1 or dayofweek(Date_field)=7,"Weekend","Weekday") as "Weekday or Weekdend",
 concat(round(sum(Load_factor)/(select sum(Load_factor) from maindata)*100,2)," ","%") as "Load factor"
 from maindata
-group by if (dayofweek(Date_field)=1 or dayofweek(Date_field)=7,"Weekend","Weekday");
+group by if (dayofweek(Date_field)=1 or dayofweek(Date_field)=7,"Weekend","Weekday");yes
 
 -- KPI 7- NO.of flights based on distance gp
 select `Distance Interval`,count(`%Airline ID`) as "No. of flights" 
